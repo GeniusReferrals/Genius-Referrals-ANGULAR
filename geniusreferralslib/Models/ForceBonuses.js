@@ -8,14 +8,14 @@
 'use strict';
 
 /**
- * Creates a instance of Bonuses1
+ * Creates a instance of ForceBonuses
  *
  * @constructor
  */
 angular.module('GeniusReferralsLib')
-    .factory('Bonuses1', ['BaseModel',
+    .factory('ForceBonuses', ['BaseModel',
         function (BaseModel) {
-            var Bonuses1 = function (obj) {
+            var ForceBonuses = function (obj) {
                 if (!obj) {
                     this.advocateToken = null;
                     this.reference = null;
@@ -35,15 +35,15 @@ angular.module('GeniusReferralsLib')
                 }
             }
     
-            Bonuses1.prototype = new BaseModel();
-            Bonuses1.prototype.constructor = Bonuses1;
+            ForceBonuses.prototype = new BaseModel();
+            ForceBonuses.prototype.constructor = ForceBonuses;
         
             /**
              * The referral's token.
              *
              * @return {string}
              */
-            Bonuses1.prototype.getAdvocateToken = function () {
+            ForceBonuses.prototype.getAdvocateToken = function () {
                 return this.advocateToken;
             };
         
@@ -52,7 +52,7 @@ angular.module('GeniusReferralsLib')
              * 
              * @param {string} value 
              */
-            Bonuses1.prototype.setAdvocateToken = function (value) {
+            ForceBonuses.prototype.setAdvocateToken = function (value) {
                 this.advocateToken = value;
             };
         
@@ -61,7 +61,7 @@ angular.module('GeniusReferralsLib')
              *
              * @return {string}
              */
-            Bonuses1.prototype.getReference = function () {
+            ForceBonuses.prototype.getReference = function () {
                 return this.reference;
             };
         
@@ -70,7 +70,7 @@ angular.module('GeniusReferralsLib')
              * 
              * @param {string} value 
              */
-            Bonuses1.prototype.setReference = function (value) {
+            ForceBonuses.prototype.setReference = function (value) {
                 this.reference = value;
             };
         
@@ -79,7 +79,7 @@ angular.module('GeniusReferralsLib')
              *
              * @return {int}
              */
-            Bonuses1.prototype.getBonusAmount = function () {
+            ForceBonuses.prototype.getBonusAmount = function () {
                 return this.bonusAmount;
             };
         
@@ -88,11 +88,11 @@ angular.module('GeniusReferralsLib')
              * 
              * @param {int} value 
              */
-            Bonuses1.prototype.setBonusAmount = function (value) {
+            ForceBonuses.prototype.setBonusAmount = function (value) {
                 this.bonusAmount = value;
             };
         
-            return Bonuses1;
+            return ForceBonuses;
         }
     ]);
 

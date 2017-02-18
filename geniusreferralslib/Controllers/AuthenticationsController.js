@@ -16,7 +16,7 @@ angular.module('GeniusReferralsLib')
                  *
                  * @return {promise<mixed>}
                  */
-                getAuthentications: function () {
+                getAuthentication: function () {
 
                     //Create promise to return
                     var _deffered = $q.defer();

@@ -83,6 +83,9 @@ angular.module('GeniusReferralsLib')
                  * @return {promise<mixed>}
                  */
                 getCampaigns: function (accountSlug, page, limit, filter, sort) {
+                    // Assign default values
+                    page = page || 1;
+                    limit = limit || 10;
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -98,8 +101,8 @@ angular.module('GeniusReferralsLib')
 
                     // Process query parameters
                     _queryBuilder = APIHelper.appendUrlWithQueryParameters(_queryBuilder, {
-                        "page": page,
-                        "limit": limit,
+                        "page": (null != page) ? page : 1,
+                        "limit": (null != limit) ? limit : 10,
                         "filter": filter,
                         "sort": sort
                     });

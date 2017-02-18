@@ -99,12 +99,14 @@ Import the reference to the generated SDK files inside your html file like:
         <script src="scripts/geniusreferralslib/Models/AdvocatePatchForm.js"></script>
         <script src="scripts/geniusreferralslib/Models/Bonuses.js"></script>
         <script src="scripts/geniusreferralslib/Models/BonusesForm.js"></script>
-        <script src="scripts/geniusreferralslib/Models/Bonuses1.js"></script>
-        <script src="scripts/geniusreferralslib/Models/BonusesForm1.js"></script>
+        <script src="scripts/geniusreferralslib/Models/ForceBonuses.js"></script>
+        <script src="scripts/geniusreferralslib/Models/ForceBonusesForm.js"></script>
         <script src="scripts/geniusreferralslib/Models/RedemptionRequest.js"></script>
         <script src="scripts/geniusreferralslib/Models/RedemptionRequestForm.js"></script>
         <script src="scripts/geniusreferralslib/Models/Referral.js"></script>
         <script src="scripts/geniusreferralslib/Models/ReferralForm.js"></script>
+        <script src="scripts/geniusreferralslib/Models/PaymentMethod.js"></script>
+        <script src="scripts/geniusreferralslib/Models/PaymentMethodForm.js"></script>
 
 		...
 	</head>
@@ -174,7 +176,7 @@ To run the app, simply open up the `index.html` file in a browser.
 The singleton instance of the ``` RootsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, RootsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RootsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -192,7 +194,7 @@ function getRoot()
 ```javascript
 
 
-	app.controller("testController", function($scope, RootsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RootsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	
 
 		var result = RootsController.getRoot();
@@ -219,17 +221,17 @@ function getRoot()
 The singleton instance of the ``` AuthenticationsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AuthenticationsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AuthenticationsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
-#### <a name="get_authentications"></a>![Method: ](https://apidocs.io/img/method.png ".AuthenticationsController.getAuthentications") getAuthentications
+#### <a name="get_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".AuthenticationsController.getAuthentication") getAuthentication
 
 > Allow clients to test authentication on Genius Referrals platform.
 
 
 ```javascript
-function getAuthentications()
+function getAuthentication()
 ```
 
 #### Example Usage
@@ -237,10 +239,10 @@ function getAuthentications()
 ```javascript
 
 
-	app.controller("testController", function($scope, AuthenticationsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AuthenticationsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	
 
-		var result = AuthenticationsController.getAuthentications();
+		var result = AuthenticationsController.getAuthentication();
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -264,7 +266,7 @@ function getAuthentications()
 The singleton instance of the ``` AdvocatesController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -290,7 +292,7 @@ function deleteAdvocate(accountSlug, advocateToken)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
 
@@ -333,7 +335,7 @@ function putAdvocate(accountSlug, advocateToken, advocateForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var advocateForm = new AdvocateForm({"key":"value"});
@@ -376,7 +378,7 @@ function postAdvocate(accountSlug, advocateForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateForm = new AdvocateForm({"key":"value"});
 
@@ -418,7 +420,7 @@ function getAdvocate(accountSlug, advocateToken)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
 
@@ -459,7 +461,7 @@ function deleteAdvocates(accountSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
 
 
@@ -503,10 +505,10 @@ function getAdvocates(accountSlug, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var page = 86;
-    var limit = 86;
+    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
@@ -549,7 +551,7 @@ function patchAdvocate(accountSlug, advocateToken, advocatePatchForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var advocatePatchForm = [{"key":"value"}].map(function(elem) {
@@ -558,6 +560,376 @@ function patchAdvocate(accountSlug, advocateToken, advocatePatchForm)
 
 
 		var result = AdvocatesController.patchAdvocate(accountSlug, advocateToken, advocatePatchForm);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_share_links"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getShareLinks") getShareLinks
+
+> Get the advocates share links. These are the links that advocates use to share your services online.  Share links are wrapped per campaign and widget package.
+
+
+```javascript
+function getShareLinks(accountSlug, advocateToken)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+
+
+		var result = AdvocatesController.getShareLinks(accountSlug, advocateToken);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="put_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.putPaymentMethod") putPaymentMethod
+
+> Update a payment method.
+
+
+```javascript
+function putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, advocatePaymentMethodForm)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The advocate's token |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodId = 132;
+    var advocatePaymentMethodForm = new PaymentMethodForm({"key":"value"});
+
+
+		var result = AdvocatesController.putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, advocatePaymentMethodForm);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getPaymentMethod") getPaymentMethod
+
+> Get an advocate's payment method
+
+
+```javascript
+function getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodId = 132;
+
+
+		var result = AdvocatesController.getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="post_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.postPaymentMethod") postPaymentMethod
+
+> Create a new payment method.
+
+
+```javascript
+function postPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodForm)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodForm = new PaymentMethodForm({"key":"value"});
+
+
+		var result = AdvocatesController.postPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodForm);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_bonus_redemption_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getBonusRedemptionMethod") getBonusRedemptionMethod
+
+> Get bonuses redemption method.
+
+
+```javascript
+function getBonusRedemptionMethod(bonusesRedemptionMethodSlug)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| bonusesRedemptionMethodSlug |  ``` Required ```  | The bonus redemption method's identifier |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var bonusesRedemptionMethodSlug = bonuses_redemption_method_slug;
+
+
+		var result = AdvocatesController.getBonusRedemptionMethod(bonusesRedemptionMethodSlug);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_bonus_redemption_methods"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getBonusRedemptionMethods") getBonusRedemptionMethods
+
+> Get bonuses redemption methods.
+
+
+```javascript
+function getBonusRedemptionMethods()
+```
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	
+
+		var result = AdvocatesController.getBonusRedemptionMethods();
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_currencies"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getCurrencies") getCurrencies
+
+> Get currencies.
+
+
+```javascript
+function getCurrencies()
+```
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	
+
+		var result = AdvocatesController.getCurrencies();
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_currency"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getCurrency") getCurrency
+
+> Get a currency.
+
+
+```javascript
+function getCurrency(code)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| code |  ``` Required ```  | The currency's code |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var code = "code";
+
+
+		var result = AdvocatesController.getCurrency(code);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
+#### <a name="get_payment_methods"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getPaymentMethods") getPaymentMethods
+
+> Get the advocate's payment methods.
+
+
+```javascript
+function getPaymentMethods(accountSlug, advocateToken, page, limit, filter, sort)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| filter |  ``` Optional ```  | Allowed fields: username, is_active. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
+| sort |  ``` Optional ```  | Allowed fields: username, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvocatesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var page = 132;
+    var limit = 132;
+    var filter = "filter";
+    var sort = "sort";
+
+
+		var result = AdvocatesController.getPaymentMethods(accountSlug, advocateToken, page, limit, filter, sort);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -581,7 +953,7 @@ function patchAdvocate(accountSlug, advocateToken, advocatePatchForm)
 The singleton instance of the ``` AccountsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -606,7 +978,7 @@ function getAccount(accountSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
 
 
@@ -637,8 +1009,8 @@ function getAccounts(page, limit, filter, sort)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
 
@@ -649,9 +1021,9 @@ function getAccounts(page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
-	    var page = 86;
-    var limit = 86;
+	app.controller("testController", function($scope, AccountsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
+	    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
@@ -680,7 +1052,7 @@ function getAccounts(page, limit, filter, sort)
 The singleton instance of the ``` ReportsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -705,7 +1077,7 @@ function getReferralsSummaryPerOrigin(advocateToken)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var advocateToken = advocate_token;
 
 
@@ -745,7 +1117,7 @@ function getBonusesSummaryPerOrigin(advocateToken)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var advocateToken = advocate_token;
 
 
@@ -778,7 +1150,7 @@ function getTopAdvocates(accountSlug, campaignSlug, limit, from, to)
 |-----------|------|-------------|
 | accountSlug |  ``` Optional ```  | The account identifier |
 | campaignSlug |  ``` Optional ```  | The campaign identifier |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10) |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10) |
 | from |  ``` Optional ```  | The datetime were the range of the search starts |
 | to |  ``` Optional ```  | The datetime were the range of the search stops |
 
@@ -789,10 +1161,10 @@ function getTopAdvocates(accountSlug, campaignSlug, limit, from, to)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
-    var limit = 86;
+    var limit = 132;
     var from = date("D M d, Y G:i");
     var to = date("D M d, Y G:i");
 
@@ -837,7 +1209,7 @@ function getShareDailyParticipation(accountSlug, campaignSlug, advocateToken, fr
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
     var advocateToken = advocate_token;
@@ -885,7 +1257,7 @@ function getReferralDailyParticipation(accountSlug, campaignSlug, advocateToken,
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
     var advocateToken = advocate_token;
@@ -933,7 +1305,7 @@ function getClickDailyParticipation(accountSlug, campaignSlug, advocateToken, fr
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
     var advocateToken = advocate_token;
@@ -981,7 +1353,7 @@ function getBonusesDailyGiven(accountSlug, campaignSlug, advocateToken, from, to
 ```javascript
 
 
-	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReportsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
     var advocateToken = advocate_token;
@@ -1013,7 +1385,7 @@ function getBonusesDailyGiven(accountSlug, campaignSlug, advocateToken, from, to
 The singleton instance of the ``` ReferralsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -1038,7 +1410,7 @@ function getReferralOrigin(referralOriginSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var referralOriginSlug = referral_origin_slug;
 
 
@@ -1071,7 +1443,7 @@ function getReferralOrigins()
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	
 
 		var result = ReferralsController.getReferralOrigins();
@@ -1112,7 +1484,7 @@ function getReferral(accountSlug, advocateToken, referralId)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var referralId = referral_id;
@@ -1156,7 +1528,7 @@ function deleteReferral(accountSlug, advocateToken, referralId)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var referralId = referral_id;
@@ -1177,13 +1549,13 @@ function deleteReferral(accountSlug, advocateToken, referralId)
 
 
 
-#### <a name="post_referrals"></a>![Method: ](https://apidocs.io/img/method.png ".ReferralsController.postReferrals") postReferrals
+#### <a name="post_referral"></a>![Method: ](https://apidocs.io/img/method.png ".ReferralsController.postReferral") postReferral
 
 > Create a new referral.
 
 
 ```javascript
-function postReferrals(accountSlug, advocateToken, referralForm)
+function postReferral(accountSlug, advocateToken, referralForm)
 ```
 #### Parameters
 
@@ -1200,13 +1572,13 @@ function postReferrals(accountSlug, advocateToken, referralForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var referralForm = new ReferralForm({"key":"value"});
 
 
-		var result = ReferralsController.postReferrals(accountSlug, advocateToken, referralForm);
+		var result = ReferralsController.postReferral(accountSlug, advocateToken, referralForm);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1245,7 +1617,7 @@ function putReferral(accountSlug, advocateToken, referralId, referralForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var referralId = referral_id;
@@ -1281,8 +1653,8 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort)
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
 | advocateToken |  ``` Required ```  | The advocate's token |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: url, referral_origin_slug, created. Use the following delimiters to build your filters params. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1293,11 +1665,11 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, ReferralsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var page = 86;
-    var limit = 86;
+    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
@@ -1326,7 +1698,7 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort)
 The singleton instance of the ``` RedemptionRequestsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -1351,7 +1723,7 @@ function getRedemptionRequestStatus(redemptionRequestStatusSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var redemptionRequestStatusSlug = redemption_request_status_slug;
 
 
@@ -1384,7 +1756,7 @@ function getRedemptionRequestStatuses()
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	
 
 		var result = RedemptionRequestsController.getRedemptionRequestStatuses();
@@ -1423,7 +1795,7 @@ function getRedemptionRequestAction(redemptionRequestActionSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var redemptionRequestActionSlug = redemption_request_action_slug;
 
 
@@ -1456,7 +1828,7 @@ function getRedemptionRequestActions()
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	
 
 		var result = RedemptionRequestsController.getRedemptionRequestActions();
@@ -1496,9 +1868,9 @@ function patchRedemptionRequest(accountSlug, redemptionRequestId)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var redemptionRequestId = 44;
+    var redemptionRequestId = 132;
 
 
 		var result = RedemptionRequestsController.patchRedemptionRequest(accountSlug, redemptionRequestId);
@@ -1538,7 +1910,7 @@ function postRedemptionRequest(accountSlug, redemptionRequestForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var redemptionRequestForm = new RedemptionRequestForm({"key":"value"});
 
@@ -1580,7 +1952,7 @@ function getRedemptionRequest(accountSlug, redemptionRequestId)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var redemptionRequestId = redemption_request_id;
 
@@ -1613,8 +1985,8 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: redemption_request_id, name, lastname, email, request_status_slug, request_action_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1625,10 +1997,10 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, RedemptionRequestsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var page = "page";
-    var limit = "limit";
+    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
@@ -1657,7 +2029,7 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort)
 The singleton instance of the ``` BonusesController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -1674,8 +2046,8 @@ function getBonuses(accountSlug, page, limit, filter, sort)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, lastname, email, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1686,10 +2058,10 @@ function getBonuses(accountSlug, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var page = 44;
-    var limit = 44;
+    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
@@ -1709,13 +2081,13 @@ function getBonuses(accountSlug, page, limit, filter, sort)
 
 
 
-#### <a name="post_bonuses"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonuses") postBonuses
+#### <a name="post_bonus"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonus") postBonus
 
 > Make an attempt to give a bonus for to the advocate's referrer. The system processes the given advocate (referral) and creates a bonus for the advocate's referrer if is needed. All restrictions set on the campaigns for this account will be check out before giving the bonus to the advocate's referrer.
 
 
 ```javascript
-function postBonuses(accountSlug, bonusesForm)
+function postBonus(accountSlug, bonusesForm)
 ```
 #### Parameters
 
@@ -1731,12 +2103,12 @@ function postBonuses(accountSlug, bonusesForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var bonusesForm = new BonusesForm({"key":"value"});
 
 
-		var result = BonusesController.postBonuses(accountSlug, bonusesForm);
+		var result = BonusesController.postBonus(accountSlug, bonusesForm);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1751,13 +2123,13 @@ function postBonuses(accountSlug, bonusesForm)
 
 
 
-#### <a name="get_bonuses_checkup"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesCheckup") getBonusesCheckup
+#### <a name="get_bonus_checkup"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusCheckup") getBonusCheckup
 
 > Check if there is a bonus to be given to the advocate. Allows the clients to check if there is a bonus to be given, it simulates the behaivor of a POST request to /accounts/{account_slug}/bonuses resource. This resource is idempotent.
 
 
 ```javascript
-function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount)
+function getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount)
 ```
 #### Parameters
 
@@ -1775,16 +2147,16 @@ function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController, $http,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController, $http,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var reference = "reference";
-    var paymentAmount = 44.4225769976259;
+    var paymentAmount = 132.655736781962;
 
 
 		$http.get().then(function(successData){
             file = successData;
-            var result = BonusesController.getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount);
+            var result = BonusesController.getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount);
         //Function call returns a promise
             result.then(function(success){
     			//success case
@@ -1802,13 +2174,13 @@ function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount)
 
 
 
-#### <a name="post_bonuses_force"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonusesForce") postBonusesForce
+#### <a name="post_force_bonus"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postForceBonus") postForceBonus
 
 > Force the system to give a bonus to an advocate. The system will not take into account the restriccions specified on the campaigns.
 
 
 ```javascript
-function postBonusesForce(accountSlug, bonusForm)
+function postForceBonus(accountSlug, bonusForm)
 ```
 #### Parameters
 
@@ -1824,12 +2196,12 @@ function postBonusesForce(accountSlug, bonusForm)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var bonusForm = new BonusesForm1({"key":"value"});
+    var bonusForm = new ForceBonusesForm({"key":"value"});
 
 
-		var result = BonusesController.postBonusesForce(accountSlug, bonusForm);
+		var result = BonusesController.postForceBonus(accountSlug, bonusForm);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1844,13 +2216,13 @@ function postBonusesForce(accountSlug, bonusForm)
 
 
 
-#### <a name="get_bonuses_trace"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesTrace") getBonusesTrace
+#### <a name="get_bonus_trace"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusTrace") getBonusTrace
 
 > Get a bonus request trace.
 
 
 ```javascript
-function getBonusesTrace(accountSlug, traceId)
+function getBonusTrace(accountSlug, traceId)
 ```
 #### Parameters
 
@@ -1866,12 +2238,12 @@ function getBonusesTrace(accountSlug, traceId)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var traceId = 44;
+    var traceId = 132;
 
 
-		var result = BonusesController.getBonusesTrace(accountSlug, traceId);
+		var result = BonusesController.getBonusTrace(accountSlug, traceId);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1908,9 +2280,9 @@ function deleteBonus(accountSlug, bonusId)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var bonusId = 44;
+    var bonusId = 132;
 
 
 		var result = BonusesController.deleteBonus(accountSlug, bonusId);
@@ -1950,9 +2322,9 @@ function getBonus(accountSlug, bonusId)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var bonusId = 44;
+    var bonusId = 132;
 
 
 		var result = BonusesController.getBonus(accountSlug, bonusId);
@@ -1970,21 +2342,21 @@ function getBonus(accountSlug, bonusId)
 
 
 
-#### <a name="get_bonuses_traces"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesTraces") getBonusesTraces
+#### <a name="get_bonus_traces"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusTraces") getBonusTraces
 
 > Get the list of bonuses traces (audit trail). Every time the system tries to give a bonus the an advocate a new trace is created.
 
 
 ```javascript
-function getBonusesTraces(accountSlug, page, limit, filter, sort)
+function getBonusTraces(accountSlug, page, limit, filter, sort)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: reference, result, bonus_amount, advocate_token, advocate_referrer_token, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1995,15 +2367,15 @@ function getBonusesTraces(accountSlug, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, BonusesController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var page = 44;
-    var limit = 44;
+    var page = 132;
+    var limit = 132;
     var filter = "filter";
     var sort = "sort";
 
 
-		var result = BonusesController.getBonusesTraces(accountSlug, page, limit, filter, sort);
+		var result = BonusesController.getBonusTraces(accountSlug, page, limit, filter, sort);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2027,7 +2399,7 @@ function getBonusesTraces(accountSlug, page, limit, filter, sort)
 The singleton instance of the ``` CampaignsController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	});
 ```
 
@@ -2053,7 +2425,7 @@ function getCampaign(accountSlug, campaignSlug)
 ```javascript
 
 
-	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
 
@@ -2086,8 +2458,8 @@ function getCampaigns(accountSlug, page, limit, filter, sort)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, description, start_date, end_date, is_active (true\|false), created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: campaign_slug, created, start_date, end_date, is_active. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -2098,10 +2470,10 @@ function getCampaigns(accountSlug, page, limit, filter, sort)
 ```javascript
 
 
-	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,Bonuses1,BonusesForm1,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm){
+	app.controller("testController", function($scope, CampaignsController,Advocate,AdvocateForm,AdvocatePatchForm,Bonuses,BonusesForm,ForceBonuses,ForceBonusesForm,RedemptionRequest,RedemptionRequestForm,Referral,ReferralForm,PaymentMethod,PaymentMethodForm){
 	    var accountSlug = account_slug;
-    var page = 44;
-    var limit = 44;
+    var page = 90;
+    var limit = 90;
     var filter = "filter";
     var sort = "sort";
 

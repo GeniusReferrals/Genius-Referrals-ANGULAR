@@ -422,14 +422,17 @@ angular.module('GeniusReferralsLib')
                 /**
                  * Get the list of redemption requests.
                  * @param {string} accountSlug    Required parameter: The account identifier
-                 * @param {string|null} page    Optional parameter: Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result.
-                 * @param {string|null} limit    Optional parameter: Maximum number of results to return in the response. Default (10), threshold (100)
+                 * @param {int|null} page    Optional parameter: Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result.
+                 * @param {int|null} limit    Optional parameter: Maximum number of results to return in the response. Default (10), threshold (100)
                  * @param {string|null} filter    Optional parameter: Allowed fields: redemption_request_id, name, lastname, email, request_status_slug, request_action_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah'
                  * @param {string|null} sort    Optional parameter: Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date'
                  *
                  * @return {promise<mixed>}
                  */
                 getRedemptionRequests: function (accountSlug, page, limit, filter, sort) {
+                    // Assign default values
+                    page = page || 1;
+                    limit = limit || 10;
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -445,8 +448,8 @@ angular.module('GeniusReferralsLib')
 
                     // Process query parameters
                     _queryBuilder = APIHelper.appendUrlWithQueryParameters(_queryBuilder, {
-                        "page": page,
-                        "limit": limit,
+                        "page": (null != page) ? page : 1,
+                        "limit": (null != limit) ? limit : 10,
                         "filter": filter,
                         "sort": sort
                     });

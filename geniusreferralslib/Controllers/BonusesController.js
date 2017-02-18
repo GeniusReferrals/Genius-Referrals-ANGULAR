@@ -22,6 +22,9 @@ angular.module('GeniusReferralsLib')
                  * @return {promise<mixed>}
                  */
                 getBonuses: function (accountSlug, page, limit, filter, sort) {
+                    // Assign default values
+                    page = page || 1;
+                    limit = limit || 10;
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -37,8 +40,8 @@ angular.module('GeniusReferralsLib')
 
                     // Process query parameters
                     _queryBuilder = APIHelper.appendUrlWithQueryParameters(_queryBuilder, {
-                        "page": page,
-                        "limit": limit,
+                        "page": (null != page) ? page : 1,
+                        "limit": (null != limit) ? limit : 10,
                         "filter": filter,
                         "sort": sort
                     });
@@ -89,7 +92,7 @@ angular.module('GeniusReferralsLib')
                  *
                  * @return {promise<mixed>}
                  */
-                postBonuses: function (accountSlug, bonusesForm) {
+                postBonus: function (accountSlug, bonusesForm) {
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -156,7 +159,7 @@ angular.module('GeniusReferralsLib')
                  *
                  * @return {promise<binary>}
                  */
-                getBonusesCheckup: function (accountSlug, advocateToken, reference, paymentAmount) {
+                getBonusCheckup: function (accountSlug, advocateToken, reference, paymentAmount) {
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -217,11 +220,11 @@ angular.module('GeniusReferralsLib')
                 /**
                  * Force the system to give a bonus to an advocate. The system will not take into account the restriccions specified on the campaigns.
                  * @param {string} accountSlug    Required parameter: The account identifier
-                 * @param {BonusesForm1} bonusForm    Required parameter: The body of the request
+                 * @param {ForceBonusesForm} bonusForm    Required parameter: The body of the request
                  *
                  * @return {promise<mixed>}
                  */
-                postBonusesForce: function (accountSlug, bonusForm) {
+                postForceBonus: function (accountSlug, bonusForm) {
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -286,7 +289,7 @@ angular.module('GeniusReferralsLib')
                  *
                  * @return {promise<mixed>}
                  */
-                getBonusesTrace: function (accountSlug, traceId) {
+                getBonusTrace: function (accountSlug, traceId) {
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -469,7 +472,10 @@ angular.module('GeniusReferralsLib')
                  *
                  * @return {promise<mixed>}
                  */
-                getBonusesTraces: function (accountSlug, page, limit, filter, sort) {
+                getBonusTraces: function (accountSlug, page, limit, filter, sort) {
+                    // Assign default values
+                    page = page || 1;
+                    limit = limit || 10;
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -485,8 +491,8 @@ angular.module('GeniusReferralsLib')
 
                     // Process query parameters
                     _queryBuilder = APIHelper.appendUrlWithQueryParameters(_queryBuilder, {
-                        "page": page,
-                        "limit": limit,
+                        "page": (null != page) ? page : 1,
+                        "limit": (null != limit) ? limit : 10,
                         "filter": filter,
                         "sort": sort
                     });

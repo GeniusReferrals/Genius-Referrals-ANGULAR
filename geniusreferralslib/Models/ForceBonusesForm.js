@@ -8,43 +8,43 @@
 'use strict';
 
 /**
- * Creates a instance of BonusesForm1
+ * Creates a instance of ForceBonusesForm
  *
  * @constructor
  */
 angular.module('GeniusReferralsLib')
-    .factory('BonusesForm1', ['BaseModel', 'Bonuses1',
-        function (BaseModel, Bonuses1) {
-            var BonusesForm1 = function (obj) {
+    .factory('ForceBonusesForm', ['BaseModel', 'ForceBonuses',
+        function (BaseModel, ForceBonuses) {
+            var ForceBonusesForm = function (obj) {
                 if (!obj) {
                     this.bonus = null;
                 } else {
-                    this.bonus = new Bonuses1(obj.bonus);
+                    this.bonus = new ForceBonuses(obj.bonus);
                 }
             }
     
-            BonusesForm1.prototype = new BaseModel();
-            BonusesForm1.prototype.constructor = BonusesForm1;
+            ForceBonusesForm.prototype = new BaseModel();
+            ForceBonusesForm.prototype.constructor = ForceBonusesForm;
         
             /**
              * The bonuses' wrapper
              *
-             * @return {Bonuses1}
+             * @return {ForceBonuses}
              */
-            BonusesForm1.prototype.getBonus = function () {
+            ForceBonusesForm.prototype.getBonus = function () {
                 return this.bonus;
             };
         
             /**
              * Setter for Bonus
              * 
-             * @param {Bonuses1} value 
+             * @param {ForceBonuses} value 
              */
-            BonusesForm1.prototype.setBonus = function (value) {
+            ForceBonusesForm.prototype.setBonus = function (value) {
                 this.bonus = value;
             };
         
-            return BonusesForm1;
+            return ForceBonusesForm;
         }
     ]);
 

@@ -140,6 +140,8 @@ angular.module('GeniusReferralsLib')
                  * @return {promise<mixed>}
                  */
                 getTopAdvocates: function (accountSlug, campaignSlug, limit, from, to) {
+                    // Assign default values
+                    limit = limit || 10;
 
                     //Create promise to return
                     var _deffered = $q.defer();
@@ -152,7 +154,7 @@ angular.module('GeniusReferralsLib')
                     _queryBuilder = APIHelper.appendUrlWithQueryParameters(_queryBuilder, {
                         "account_slug": accountSlug,
                         "campaign_slug": campaignSlug,
-                        "limit": limit,
+                        "limit": (null != limit) ? limit : 10,
                         "from": from,
                         "to": to
                     });
