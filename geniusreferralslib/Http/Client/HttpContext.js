@@ -10,7 +10,7 @@
  *
  * @constructor
  */
-angular.module('TesterLib')
+angular.module('GeniusReferralsLib')
     .factory('HttpContext',
         function () {
             return function HttpContext() {
