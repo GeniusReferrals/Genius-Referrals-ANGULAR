@@ -180,7 +180,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -241,7 +241,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -371,7 +371,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -438,7 +438,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -499,7 +499,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -628,7 +628,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -695,7 +695,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -754,7 +754,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -807,7 +807,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){
@@ -860,7 +860,7 @@ angular.module('GeniusReferralsLib')
                     
                     //process response
                     _response.then(function (_result) {
-                        var _strResult =_result.body;
+                        var _strResult = JSON.stringify(_result.body);;
                         _result.body = JSON.parse(_strResult);
                         _deffered.resolve(_result);
                     }, function(_result){

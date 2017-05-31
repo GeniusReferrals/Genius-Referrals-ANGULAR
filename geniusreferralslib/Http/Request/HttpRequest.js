@@ -10,7 +10,7 @@
  *
  * @constructor
  */
-angular.module('TesterLib')
+angular.module('GeniusReferralsLib')
     .factory('HttpRequest',
         function () {
             return function HttpRequest() {
