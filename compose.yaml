@@ -1,0 +1,8 @@
+services:
+  sdk:
+    build: .
+    working_dir: /sdk
+    command: ["node", "node_modules/.bin/jest", "--coverage=false", "--verbose"]
+    environment:
+      - GR_API_TOKEN=${GR_API_TOKEN}
+      - GR_ACCOUNT_SLUG=${GR_ACCOUNT_SLUG:-test1000}
